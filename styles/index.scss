@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+$mainFont: "Pacifico", cursive;
+body {
+  margin: 0;
+  padding: 0;
+  //   background-image: url("https://media4.giphy.com/media/26gIQ0DsLS5ydqHdK/giphy.gif?cid=790b7611f20e9ad58966c7fed70066512c7bb3b3a6adb097&rid=giphy.gif&ct=g");
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  background: rgb(218, 13, 175);
+  background: linear-gradient(
+    278deg,
+    rgba(218, 13, 175, 1) 44%,
+    rgba(199, 11, 219, 1) 52%
+  );
+  background-position-y: -100px;
+}
+.container {
+  position: relative;
+  min-height: 100vh;
+  .heading {
+    font-family: $mainFont;
+    font-size: 100px;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @mixin select {
+    font-family: $mainFont;
+    border: 10px groove rgb(240, 6, 96);
+    font-size: 80px;
+    width: 200px;
+    text-align: center;
+    top: 50%;
+    border-radius: 20px;
+    color: rgb(23, 20, 23);
+  }
+  .select-yes {
+    left: 10%;
+    position: absolute;
+    @include select;
+  }
+  .select-no-container {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    .select-no {
+      @include select;
+      left: 60%;
+      margin: 70px;
+    }
+  }
+}
